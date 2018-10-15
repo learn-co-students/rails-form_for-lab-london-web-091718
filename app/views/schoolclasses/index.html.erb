@@ -1,0 +1,8 @@
+<h1> School Classes </h1>
+
+<% @schoolclasses.each do |sc| %>
+<ul>
+<li> <%= "Class: #{sc.title} Room #: #{sc.room_number}" %> </li>
+</ul>
+
+<% end %>
