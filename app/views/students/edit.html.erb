@@ -1,0 +1,19 @@
+<h1>Edit a Classroom</h1>
+
+<%= link_to "Cancel", student_url(@student) %>
+
+<%= form_for @student do |f| %>
+
+<p><%= f.label :first_name %>
+<%= f.text_field :first_name %></p>
+
+<p><%= f.label :last_name %>
+<%= f.text_field :last_name %></p>
+
+<p><%= f.submit %></p>
+
+<%= form_tag student_url, method: "delete" do %>
+<%= submit_tag "Delete Student" %>
+<% end %>
+
+<% end %>
