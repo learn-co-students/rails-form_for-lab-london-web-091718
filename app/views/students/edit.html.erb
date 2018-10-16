@@ -1,0 +1,11 @@
+<%= form_for(@student) do |f| %>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+<br>
+<%= f.label :last_name %>
+<%= f.text_field :last_name %>
+<br>
+<%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Delete", student_path(@student), method: :delete, data: { confirm: "Are you sure?"} %>
