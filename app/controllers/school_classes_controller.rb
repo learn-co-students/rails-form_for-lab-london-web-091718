@@ -2,6 +2,13 @@ class SchoolClassesController < ApplicationController
 
   before_action :set_school_class, only: [:show, :edit, :update]
 
+  def index
+    @school_classes = SchoolClass.all
+  end
+
+  def show
+  end
+
   def new
     @school_class = SchoolClass.new
   end
@@ -11,19 +18,12 @@ class SchoolClassesController < ApplicationController
     redirect_to school_class_path(@school_class)
   end
 
-  def show
-  end
-
   def edit
   end
 
   def update
     @school_class.update(school_class_params)
     redirect_to school_class_path(@school_class)
-  end
-
-  def index
-    @school_classes = SchoolClass.all
   end
 
   private
