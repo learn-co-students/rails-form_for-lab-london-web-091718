@@ -1,0 +1,14 @@
+<%= form_for @school_class do |f| %>
+
+<p><%= f.label :title %>
+<%= f.text_field :title %></p>
+
+<p><%= f.label :room_number %>
+<%= f.number_field :room_number %></p>
+
+<p><%= f.submit %></p>
+
+<%= form_tag school_class_url, method: "delete" do %>
+<%= submit_tag "Delete Classroom" %>
+<% end %>
+<% end %>

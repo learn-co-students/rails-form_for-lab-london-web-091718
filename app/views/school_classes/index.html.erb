@@ -1,0 +1,7 @@
+<h1>These Are All The Classrooms</h1>
+<p><%= link_to "Create a New Classroom", new_school_class_url %></p>
+<hr>
+<% @school_classes.each do |school_class| %>
+<p><%= link_to school_class.title, school_class_url(school_class) %></p>
+<% end %>
+<hr>
