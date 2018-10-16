@@ -1,0 +1,4 @@
+<h1> Name: <%= @student.first_name %> <h1>
+<h1> Surname: <%= @student.last_name %> <h1>
+<%= link_to "Go back", students_path %>
+<%= link_to "Edit this student", edit_student_path(@student) %>
